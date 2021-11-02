@@ -1,0 +1,6 @@
+#!/bin/bash
+
+helm package ${HOME}/git/terraform-kubernetes-controller/manifests/charts/terraform-controller
+
+helm repo index . --url https://smsilva.github.io/helm
+
