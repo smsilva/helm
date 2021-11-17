@@ -3,9 +3,9 @@ entries:
   terraform-controller:
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-11-16T23:41:08.405665752-03:00"
+    created: "2021-11-17T08:42:00.25143319-03:00"
     description: Terraform Controller for Stack Instances Resources
-    digest: b69144db31f663f17a219ce840d91a55fb65be19be8d6b4f84f4297f3c46a43f
+    digest: 57cd7fa052729cffe072907940ab9de3e66b02a2811372ec8bacdf234626adb8
     name: terraform-controller
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2021-11-16T23:41:08.405473139-03:00"
+    created: "2021-11-17T08:42:00.251230949-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 6ae22fd2f5bd45ab4502ccc71673fe9a7c7bc2b9144418d4967c007c928cffa6
     name: terraform-controller
@@ -21,4 +21,4 @@ entries:
     urls:
     - https://smsilva.github.io/helm/terraform-controller-0.1.1.tgz
     version: 0.1.1
-generated: "2021-11-16T23:41:08.405038206-03:00"
+generated: "2021-11-17T08:42:00.250741133-03:00"
