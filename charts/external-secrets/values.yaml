@@ -1,0 +1,3 @@
+azurekv:
+  tenantId: "TENANT_ID_VALUE"
+  keyVaultName: "KEY_VAULT_NAME"
