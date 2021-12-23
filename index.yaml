@@ -3,7 +3,17 @@ entries:
   terraform-controller:
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-22T20:37:52.343310573-03:00"
+    created: "2021-12-23T15:30:19.634664736-03:00"
+    description: Terraform Controller for Stack Instances Resources
+    digest: 20234e8366661b3a7cc2ad91a11288466a1970415eb8a63aaf61943bf3cb608d
+    name: terraform-controller
+    type: application
+    urls:
+    - https://smsilva.github.io/helm/terraform-controller-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: alpha
+    created: "2021-12-23T15:30:19.63440205-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: b3d88ec1d1a2aa4cab1e78435e2940192c034ab21105830eb2df3eddc94ba647
     name: terraform-controller
@@ -13,7 +23,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-22T20:37:52.343083116-03:00"
+    created: "2021-12-23T15:30:19.633969769-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 57cd7fa052729cffe072907940ab9de3e66b02a2811372ec8bacdf234626adb8
     name: terraform-controller
@@ -23,7 +33,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-22T20:37:52.343640233-03:00"
+    created: "2021-12-23T15:30:19.635062686-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: e22691d5d87810d208ab68678373336d77988a3096d5bcb63ec79d8fe3ffa719
     name: terraform-controller
@@ -33,7 +43,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2021-12-22T20:37:52.342407827-03:00"
+    created: "2021-12-23T15:30:19.63349427-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 6ae22fd2f5bd45ab4502ccc71673fe9a7c7bc2b9144418d4967c007c928cffa6
     name: terraform-controller
@@ -41,4 +51,4 @@ entries:
     urls:
     - https://smsilva.github.io/helm/terraform-controller-0.1.1.tgz
     version: 0.1.1
-generated: "2021-12-22T20:37:52.341850122-03:00"
+generated: "2021-12-23T15:30:19.633009918-03:00"
