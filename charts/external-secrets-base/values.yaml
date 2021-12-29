@@ -1,0 +1,6 @@
+azurerm:
+  namespace: default
+  secret: azurerm-client-credentials
+  client:
+    id: client_id_value
+    secret: client_secret_value
