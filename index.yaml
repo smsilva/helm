@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  argocd-undercloud:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-01-27T12:20:54.289004337-03:00"
+    description: A Helm chart for Kubernetes
+    digest: 871abf93ec1e575fcd519f8636f4b3545af5386fbe2e30c5a1bcae8dc51e779f
+    name: argocd-undercloud
+    type: application
+    urls:
+    - https://smsilva.github.io/helm/argocd-undercloud-0.1.0.tgz
+    version: 0.1.0
   external-secrets:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-12-29T20:06:49.782765532-03:00"
+    created: "2022-01-27T12:20:54.289183932-03:00"
     description: A Helm chart for Kubernetes
     digest: e27bcdcb36dda754f668a3a88e1022547f279f46c00caf97de4afe57b1ef6e09
     name: external-secrets
@@ -14,7 +25,7 @@ entries:
   external-secrets-base:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-12-29T20:06:49.782977162-03:00"
+    created: "2022-01-27T12:20:54.289366717-03:00"
     description: A Helm chart for Kubernetes
     digest: 4a9b54aa097e5eb985686159a716baf01f155aeb31f0d86494fc527e784c5443
     name: external-secrets-base
@@ -25,7 +36,7 @@ entries:
   secret-store:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-12-29T20:06:49.783153506-03:00"
+    created: "2022-01-27T12:20:54.289528368-03:00"
     description: A Helm chart for Kubernetes
     digest: 116d42c44bc09218aecdc19973317208ad03c0d2bfd06fe839d47b44b93797d2
     name: secret-store
@@ -36,7 +47,7 @@ entries:
   terraform-controller:
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-29T20:06:49.785964385-03:00"
+    created: "2022-01-27T12:20:54.290456506-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 20234e8366661b3a7cc2ad91a11288466a1970415eb8a63aaf61943bf3cb608d
     name: terraform-controller
@@ -46,7 +57,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-29T20:06:49.785712986-03:00"
+    created: "2022-01-27T12:20:54.290189529-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: b3d88ec1d1a2aa4cab1e78435e2940192c034ab21105830eb2df3eddc94ba647
     name: terraform-controller
@@ -56,7 +67,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: alpha
-    created: "2021-12-29T20:06:49.785410295-03:00"
+    created: "2022-01-27T12:20:54.289937242-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 57cd7fa052729cffe072907940ab9de3e66b02a2811372ec8bacdf234626adb8
     name: terraform-controller
@@ -66,7 +77,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2021-12-29T20:06:49.783356602-03:00"
+    created: "2022-01-27T12:20:54.289727912-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 6ae22fd2f5bd45ab4502ccc71673fe9a7c7bc2b9144418d4967c007c928cffa6
     name: terraform-controller
@@ -74,4 +85,4 @@ entries:
     urls:
     - https://smsilva.github.io/helm/terraform-controller-0.1.1.tgz
     version: 0.1.1
-generated: "2021-12-29T20:06:49.782451092-03:00"
+generated: "2022-01-27T12:20:54.288695391-03:00"
