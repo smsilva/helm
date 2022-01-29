@@ -12,10 +12,11 @@ spec:
     name: argocd-repo-github-smsilva-argocd-creds
     creationPolicy: Owner
     template:
-      annotations:
-        managed-by: argocd.argoproj.io
-      labels:
-        argocd.argoproj.io/secret-type: repo-creds
+      metadata:
+        annotations:
+          managed-by: argocd.argoproj.io
+        labels:
+          argocd.argoproj.io/secret-type: repo-creds
       type: Opaque
       data:
         sshPrivateKey: |
