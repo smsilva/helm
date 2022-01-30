@@ -27,7 +27,7 @@ spec:
   data:
     - secretKey: "idrsabase64filecontent"
       remoteRef:
-        key: secret/git-ssh-private-key-file-contents-base64-enconded
+        key: secret/git-ssh-private-key-file-contents-base64-encoded
 
     - secretKey: "privaterepourl"
       remoteRef:
