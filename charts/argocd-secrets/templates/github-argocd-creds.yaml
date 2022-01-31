@@ -1,7 +1,7 @@
 apiVersion: external-secrets.io/v1alpha1
 kind: ExternalSecret
 metadata:
-  name: argocd-repo-github-smsilva-argocd-creds
+  name: argocd-repo-creds
 spec:
   refreshInterval: 1h
   secretStoreRef:
@@ -9,7 +9,7 @@ spec:
     name: azurerm
 
   target:
-    name: argocd-repo-github-smsilva-argocd-creds
+    name: argocd-repo-creds
     creationPolicy: Owner
     template:
       metadata:
