@@ -1,0 +1,11 @@
+name: bootstrap
+namespace: argocd
+project: default
+source:
+  repoURL: git@ssh.dev.azure.com:v3/ab-inbev/GHQ_B2B_Delta/bees-resources
+  targetRevision: crossplane
+  path: charts/undercloud
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true

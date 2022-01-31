@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bootstrap
-  namespace: argocd
+  name: {{ .Values.name | default "bootstrap" }}
+  namespace: {{ .Values.namespace | default "argocd" }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: {{ .Values.project | default "default" }}
   destination:
     namespace: default
     name: in-cluster
   source:
-    repoURL: git@ssh.dev.azure.com:v3/ab-inbev/GHQ_B2B_Delta/bees-resources
-    targetRevision: crossplane
-    path: charts/undercloud
+    repoURL: {{ .Values.source.repoURL }}
+    targetRevision: {{ .Values.source.targetRevision }}
+    path: {{ .Values.source.path }}
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
+      prune: {{ .Values.syncPolicy.automated.prune | default "true" }}
+      selfHeal: {{ .Values.syncPolicy.automated.selfHeal | default "false" }}
