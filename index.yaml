@@ -3,7 +3,7 @@ entries:
   argocd-bootstrap:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.8391674-03:00"
+    created: "2022-01-31T13:15:20.66462381-03:00"
     description: A Helm chart for Kubernetes
     digest: b418d98e96a97e867f019ece22ecb2df05e2af65f5b287600d57a15c780c816b
     name: argocd-bootstrap
@@ -14,7 +14,7 @@ entries:
   argocd-secrets:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.839783109-03:00"
+    created: "2022-01-31T13:15:20.665270293-03:00"
     description: ArgoCD Secrets
     digest: 117ba1224e65adb9c82ff182f4bc2648f01b8e65c81ff5f1ac6313ab772a5c30
     name: argocd-secrets
@@ -24,7 +24,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.839627919-03:00"
+    created: "2022-01-31T13:15:20.665122433-03:00"
     description: ArgoCD Secrets
     digest: c13e03c9357b52c71bdf36bd5a3ab2400181b44b539f68c623293206eefc6c67
     name: argocd-secrets
@@ -34,7 +34,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.839473327-03:00"
+    created: "2022-01-31T13:15:20.664951757-03:00"
     description: ArgoCD Secrets
     digest: b8c9e1310a4dcb43d3c654a8a0e0a478b7be607f095e297092b0d7cf36309e56
     name: argocd-secrets
@@ -44,7 +44,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.839325564-03:00"
+    created: "2022-01-31T13:15:20.664801704-03:00"
     description: ArgoCD Secrets
     digest: c7bb0cb410dd2103eae929619b34e3fe396f9b1e1b018c24928a33613de162b7
     name: argocd-secrets
@@ -55,7 +55,7 @@ entries:
   argocd-undercloud:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-01-31T12:40:46.839936099-03:00"
+    created: "2022-01-31T13:15:20.665432617-03:00"
     description: A Helm chart for Kubernetes
     digest: 871abf93ec1e575fcd519f8636f4b3545af5386fbe2e30c5a1bcae8dc51e779f
     name: argocd-undercloud
@@ -66,7 +66,7 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.840095703-03:00"
+    created: "2022-01-31T13:15:20.665611201-03:00"
     description: A Helm chart for Kubernetes
     digest: e27bcdcb36dda754f668a3a88e1022547f279f46c00caf97de4afe57b1ef6e09
     name: external-secrets
@@ -77,7 +77,7 @@ entries:
   external-secrets-base:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.840447116-03:00"
+    created: "2022-01-31T13:15:20.666528857-03:00"
     description: A Helm chart for Kubernetes
     digest: 020c4b3f88889da8b991d87d21d958a307af17800cf979d6925d1d8c9eb958e5
     name: external-secrets-base
@@ -87,7 +87,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.840271855-03:00"
+    created: "2022-01-31T13:15:20.666183817-03:00"
     description: A Helm chart for Kubernetes
     digest: 4a9b54aa097e5eb985686159a716baf01f155aeb31f0d86494fc527e784c5443
     name: external-secrets-base
@@ -98,7 +98,17 @@ entries:
   secret-store:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.842220246-03:00"
+    created: "2022-01-31T13:15:20.667008444-03:00"
+    description: A Helm chart for Kubernetes
+    digest: 9c9272330c401ccec7368943f0410efb0a8c590cf7e8dd402b613059a339f487
+    name: secret-store
+    type: application
+    urls:
+    - https://smsilva.github.io/helm/secret-store-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-31T13:15:20.666844778-03:00"
     description: A Helm chart for Kubernetes
     digest: f131a3f2ab620521bb00307b7c9cd60c9a075749f6deab14addabc01ebdb540f
     name: secret-store
@@ -108,7 +118,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-31T12:40:46.84200405-03:00"
+    created: "2022-01-31T13:15:20.666688134-03:00"
     description: A Helm chart for Kubernetes
     digest: 116d42c44bc09218aecdc19973317208ad03c0d2bfd06fe839d47b44b93797d2
     name: secret-store
@@ -119,7 +129,7 @@ entries:
   terraform-controller:
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-01-31T12:40:46.84312397-03:00"
+    created: "2022-01-31T13:15:20.667868977-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 20234e8366661b3a7cc2ad91a11288466a1970415eb8a63aaf61943bf3cb608d
     name: terraform-controller
@@ -129,7 +139,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-01-31T12:40:46.842859908-03:00"
+    created: "2022-01-31T13:15:20.667647034-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: b3d88ec1d1a2aa4cab1e78435e2940192c034ab21105830eb2df3eddc94ba647
     name: terraform-controller
@@ -139,7 +149,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-01-31T12:40:46.842635427-03:00"
+    created: "2022-01-31T13:15:20.667403686-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 57cd7fa052729cffe072907940ab9de3e66b02a2811372ec8bacdf234626adb8
     name: terraform-controller
@@ -149,7 +159,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2022-01-31T12:40:46.842434399-03:00"
+    created: "2022-01-31T13:15:20.66719912-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 6ae22fd2f5bd45ab4502ccc71673fe9a7c7bc2b9144418d4967c007c928cffa6
     name: terraform-controller
@@ -157,4 +167,4 @@ entries:
     urls:
     - https://smsilva.github.io/helm/terraform-controller-0.1.1.tgz
     version: 0.1.1
-generated: "2022-01-31T12:40:46.838908765-03:00"
+generated: "2022-01-31T13:15:20.664382115-03:00"
