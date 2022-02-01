@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#helm package ${HOME}/git/terraform-kubernetes-controller/manifests/charts/terraform-controller
+# ${HOME}/git/terraform-kubernetes-controller/manifests/charts/terraform-controller
 
-CHART_REPOSITORY=${PWD}/$1
+CHART_REPOSITORY=$1
 
-helm package ${CHART_REPOSITORY?}
+helm package "${CHART_REPOSITORY?}"
 
 helm repo index . --url https://smsilva.github.io/helm
