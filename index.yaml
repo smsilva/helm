@@ -3,7 +3,7 @@ entries:
   argocd-bootstrap:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415099852-03:00"
+    created: "2022-02-03T11:20:32.471053464-03:00"
     description: A Helm chart for Kubernetes
     digest: 92e0bbec949d01564c79aee1334d6f4903243452f2a16322c3310ec120768ea9
     name: argocd-bootstrap
@@ -13,7 +13,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.41489279-03:00"
+    created: "2022-02-03T11:20:32.470697411-03:00"
     description: A Helm chart for Kubernetes
     digest: 2cb520dbd536111445a1ec7fb34bfb7e6456ffa460fdcd5eefb5c99bec563bd9
     name: argocd-bootstrap
@@ -23,7 +23,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.414757502-03:00"
+    created: "2022-02-03T11:20:32.470380459-03:00"
     description: A Helm chart for Kubernetes
     digest: 1c3dad40514b09f3e31908873146d1ecdb93c724248458ea17fe60b8d67b4441
     name: argocd-bootstrap
@@ -34,7 +34,7 @@ entries:
   argocd-secrets:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415801536-03:00"
+    created: "2022-02-03T11:20:32.47255533-03:00"
     description: ArgoCD Secrets
     digest: 8c57f51c5f080bf5239007550fdee6bafb1723ec185ae815b58f2dd4f7b34c0f
     name: argocd-secrets
@@ -44,7 +44,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415662046-03:00"
+    created: "2022-02-03T11:20:32.472250134-03:00"
     description: ArgoCD Secrets
     digest: 117ba1224e65adb9c82ff182f4bc2648f01b8e65c81ff5f1ac6313ab772a5c30
     name: argocd-secrets
@@ -54,7 +54,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415511715-03:00"
+    created: "2022-02-03T11:20:32.471939074-03:00"
     description: ArgoCD Secrets
     digest: c13e03c9357b52c71bdf36bd5a3ab2400181b44b539f68c623293206eefc6c67
     name: argocd-secrets
@@ -64,7 +64,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415379086-03:00"
+    created: "2022-02-03T11:20:32.471638867-03:00"
     description: ArgoCD Secrets
     digest: b8c9e1310a4dcb43d3c654a8a0e0a478b7be607f095e297092b0d7cf36309e56
     name: argocd-secrets
@@ -74,7 +74,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.415246142-03:00"
+    created: "2022-02-03T11:20:32.471345302-03:00"
     description: ArgoCD Secrets
     digest: c7bb0cb410dd2103eae929619b34e3fe396f9b1e1b018c24928a33613de162b7
     name: argocd-secrets
@@ -85,7 +85,7 @@ entries:
   argocd-undercloud:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-02-01T19:32:05.41594465-03:00"
+    created: "2022-02-03T11:20:32.472880258-03:00"
     description: A Helm chart for Kubernetes
     digest: 871abf93ec1e575fcd519f8636f4b3545af5386fbe2e30c5a1bcae8dc51e779f
     name: argocd-undercloud
@@ -96,7 +96,7 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.416094386-03:00"
+    created: "2022-02-03T11:20:32.473197686-03:00"
     description: A Helm chart for Kubernetes
     digest: e27bcdcb36dda754f668a3a88e1022547f279f46c00caf97de4afe57b1ef6e09
     name: external-secrets
@@ -107,7 +107,7 @@ entries:
   external-secrets-base:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.416402726-03:00"
+    created: "2022-02-03T11:20:32.47575046-03:00"
     description: A Helm chart for Kubernetes
     digest: 020c4b3f88889da8b991d87d21d958a307af17800cf979d6925d1d8c9eb958e5
     name: external-secrets-base
@@ -117,7 +117,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.416248772-03:00"
+    created: "2022-02-03T11:20:32.473538012-03:00"
     description: A Helm chart for Kubernetes
     digest: 4a9b54aa097e5eb985686159a716baf01f155aeb31f0d86494fc527e784c5443
     name: external-secrets-base
@@ -128,7 +128,7 @@ entries:
   secret-store:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.417474547-03:00"
+    created: "2022-02-03T11:20:32.479077549-03:00"
     description: A Helm chart for Kubernetes
     digest: 9c9272330c401ccec7368943f0410efb0a8c590cf7e8dd402b613059a339f487
     name: secret-store
@@ -138,7 +138,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.417149584-03:00"
+    created: "2022-02-03T11:20:32.477812947-03:00"
     description: A Helm chart for Kubernetes
     digest: f131a3f2ab620521bb00307b7c9cd60c9a075749f6deab14addabc01ebdb540f
     name: secret-store
@@ -148,7 +148,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-01T19:32:05.416544503-03:00"
+    created: "2022-02-03T11:20:32.477250368-03:00"
     description: A Helm chart for Kubernetes
     digest: 116d42c44bc09218aecdc19973317208ad03c0d2bfd06fe839d47b44b93797d2
     name: secret-store
@@ -158,8 +158,18 @@ entries:
     version: 0.1.0
   terraform-controller:
   - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2022-02-03T11:20:32.479878151-03:00"
+    description: Terraform Controller for Stack Instances Resources
+    digest: 741b2d4e04cabba9fa7c22928d6c22ba40adf70dab00fb1acd6def0ee7c4ba05
+    name: terraform-controller
+    type: application
+    urls:
+    - https://smsilva.github.io/helm/terraform-controller-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
     appVersion: 0.5.1
-    created: "2022-02-01T19:32:05.419056937-03:00"
+    created: "2022-02-03T11:20:32.483447529-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 928ac18e77a4b7dc736ccb66d3146429e1f98793d7cf7c156c22442b36b046a0
     name: terraform-controller
@@ -169,7 +179,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2022-02-01T19:32:05.418832626-03:00"
+    created: "2022-02-03T11:20:32.482980058-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 7cdbf780dbe19d09db17ae042c38c55543cb404d421a4709f8a7e6aab351b0d8
     name: terraform-controller
@@ -179,7 +189,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 0.5.1
-    created: "2022-02-01T19:32:05.418629305-03:00"
+    created: "2022-02-03T11:20:32.482564255-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: b0ea057b90d588f49b0c163360f93c8688a209f9e170503a6087e96371e57116
     name: terraform-controller
@@ -189,7 +199,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.5.0
-    created: "2022-02-01T19:32:05.41843518-03:00"
+    created: "2022-02-03T11:20:32.482136784-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 0e039335e5b27a5762a7c791664fa1234dab6dfd310767b3b58028bf6d1eab63
     name: terraform-controller
@@ -199,7 +209,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-02-01T19:32:05.418236501-03:00"
+    created: "2022-02-03T11:20:32.481532554-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 20234e8366661b3a7cc2ad91a11288466a1970415eb8a63aaf61943bf3cb608d
     name: terraform-controller
@@ -209,7 +219,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-02-01T19:32:05.418037902-03:00"
+    created: "2022-02-03T11:20:32.480945687-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: b3d88ec1d1a2aa4cab1e78435e2940192c034ab21105830eb2df3eddc94ba647
     name: terraform-controller
@@ -219,7 +229,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: alpha
-    created: "2022-02-01T19:32:05.41783459-03:00"
+    created: "2022-02-03T11:20:32.480391938-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 57cd7fa052729cffe072907940ab9de3e66b02a2811372ec8bacdf234626adb8
     name: terraform-controller
@@ -229,7 +239,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2022-02-01T19:32:05.417660526-03:00"
+    created: "2022-02-03T11:20:32.479493521-03:00"
     description: Terraform Controller for Stack Instances Resources
     digest: 6ae22fd2f5bd45ab4502ccc71673fe9a7c7bc2b9144418d4967c007c928cffa6
     name: terraform-controller
@@ -237,4 +247,4 @@ entries:
     urls:
     - https://smsilva.github.io/helm/terraform-controller-0.1.1.tgz
     version: 0.1.1
-generated: "2022-02-01T19:32:05.414522304-03:00"
+generated: "2022-02-03T11:20:32.469941478-03:00"
