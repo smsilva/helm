@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  httpbin:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-03-24T07:55:32.66038691-03:00"
+    description: httpbin for http requests tests
+    digest: 7e7c443881ef64b2f8c14efde9da24777e39d2862c40baba589e2a101507f6f6
+    name: httpbin
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/smsilva/helm/helm-charts/releases/httpbin-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-24T07:55:32.65981435-03:00"
