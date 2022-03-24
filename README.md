@@ -5,20 +5,25 @@
 ### Package Helm Chart
 
 ```bash
-helm package charts/httpbin --destination releases/
+helm package \
+  charts/httpbin \
+  --destination releases/
 ```
 
 ### Generate Helm Index File
 
 ```bash
-helm repo index releases/ \
+helm repo index \
+  releases/ \
   --url https://raw.githubusercontent.com/smsilva/helm/main/releases
 ```
 
 ## Usage Example
 
 ```bash
-helm repo add    smsilva https://raw.githubusercontent.com/smsilva/helm/main/releases
+helm repo add \
+  smsilva https://raw.githubusercontent.com/smsilva/helm/main/releases
+
 helm repo update smsilva
 helm search repo smsilva
 
@@ -28,8 +33,7 @@ helm upgrade \
   --create-namespace \
   --version "0.1.0" \
   httpbin smsilva/httpbin \
-  --wait
-
+  --wait && \
 kubectl \
   --namespace httpbin \
   get deployments,pods,services
@@ -41,5 +45,6 @@ kubectl \
 helm uninstall httpbin \
   --namespace httpbin \
   --wait && \
-kubectl delete namespace httpbin
+kubectl delete namespace httpbin && \
+kubectl get namespaces
 ```
