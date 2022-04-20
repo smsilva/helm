@@ -1,8 +1,20 @@
 # Helm Charts
 
+## Install kind and Create a Local Cluster
+
+[Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start)
+
+## Setting up this repo
+
+```bash
+git clone https://github.com/smsilva/helm.git
+cd helm
+```
+
 ## Create and Install a Helm Chart
 
 ```bash
+# Create a "mychart" Helm Chart
 helm create charts/mychart
 
 # remove files
@@ -17,10 +29,10 @@ rm -rf charts/mychart/templates/tests
 rm -rf charts/mychart/values.yaml
 
 # Show mychart structure
-find charts/mychart
+find charts/mychart -type f
 
 # Show Template
-helm template mychart-release charts/mychart
+helm template mychart-example charts/mychart
 
 # Generate a new values.yaml file
 cat <<EOF > charts/mychart/values.yaml
@@ -40,6 +52,11 @@ data:
   timeout: {{ .Values.config.timeout | quote }}
 EOF
 
+# Generate a new NOTES.txt file
+cat <<EOF > charts/mychart/templates/NOTES.txt
+The config will have {{ .Values.config.replicas | quote }} replicas and a timeout of {{ .Values.config.timeout | quote }} seconds.
+EOF
+
 # Show Template
 helm template mychart-example charts/mychart
 
@@ -49,20 +66,48 @@ helm install mychart-example charts/mychart
 # List Helm Releases
 helm list
 
+# Check the ConfigMap
+kubectl get configmap my-config-map -o yaml
+
 # Unistall Helm Release
 helm uninstall mychart-example
 
 # Install
-helm install mychart-example charts/mychart
+helm install mychart-example charts/mychart 
+helm list # take a look on the last column
 
 # Change Chart Version
+grep "^appVersion" charts/mychart/Chart.yaml
+
 sed -i 's/appVersion:.*/appVersion: 1.0.0/g' charts/mychart/Chart.yaml
+
+grep "^appVersion" charts/mychart/Chart.yaml
 
 # Upgrade
 helm upgrade --install mychart-example charts/mychart
+helm list #  take a look on the third and last column
 
-# List Helm Releases
-helm list
+# Passing parameters
+helm upgrade \
+  --install mychart-example charts/mychart \
+  --set "config.replicas=10"
+
+kubectl get configmap my-config-map -o yaml
+
+mkdir -p ${HOME}/trash
+
+cat <<EOF > ${HOME}/trash/values-extra.yaml
+config:
+  replicas: 15
+EOF
+
+cat ${HOME}/trash/values-extra.yaml
+
+helm upgrade \
+  --install mychart-example charts/mychart \
+  --values ${HOME}/trash/values-extra.yaml
+
+kubectl get configmap my-config-map -o yaml
 ```
 
 ## Packaging
