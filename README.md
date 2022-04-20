@@ -1,5 +1,70 @@
 # Helm Charts
 
+## Create and Install a Helm Chart
+
+```bash
+helm create charts/mychart
+
+# remove files
+rm -rf charts/mychart/charts
+rm -rf charts/mychart/templates/deployment.yaml
+rm -rf charts/mychart/templates/hpa.yaml
+rm -rf charts/mychart/templates/ingress.yaml
+rm -rf charts/mychart/templates/NOTES.txt
+rm -rf charts/mychart/templates/service.yaml
+rm -rf charts/mychart/templates/serviceaccount.yaml
+rm -rf charts/mychart/templates/tests
+rm -rf charts/mychart/values.yaml
+
+# Show mychart structure
+find charts/mychart
+
+# Show Template
+helm template mychart-release charts/mychart
+
+# Generate a new values.yaml file
+cat <<EOF > charts/mychart/values.yaml
+config:
+  replicas: 3
+  timeout: 360
+EOF
+
+# Generate a new configmap.yaml file
+cat <<EOF > charts/mychart/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config-map
+data:
+  replicas: {{ .Values.config.replicas | quote }}
+  timeout: {{ .Values.config.timeout | quote }}
+EOF
+
+# Show Template
+helm template mychart-example charts/mychart
+
+# Install Helm Chart
+helm install mychart-example charts/mychart
+
+# List Helm Releases
+helm list
+
+# Unistall Helm Release
+helm uninstall mychart-example
+
+# Install
+helm install mychart-example charts/mychart
+
+# Change Chart Version
+sed -i 's/appVersion:.*/appVersion: 1.0.0/g' charts/mychart/Chart.yaml
+
+# Upgrade
+helm upgrade --install mychart-example charts/mychart
+
+# List Helm Releases
+helm list
+```
+
 ## Packaging
 
 ### Package Helm Chart

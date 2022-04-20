@@ -1,0 +1,3 @@
+config:
+  replicas: 2
+  timeout: 360
