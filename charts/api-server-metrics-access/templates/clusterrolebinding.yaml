@@ -1,0 +1,14 @@
+{{- if .Values.serviceAccount.create -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: non-resource-url-metrics-access
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: non-resource-url-metrics-access
+subjects:
+- kind: ServiceAccount
+  name: {{ include "api-server-metrics-access.serviceAccountName" . }}
+  namespace: default
+{{- end }}

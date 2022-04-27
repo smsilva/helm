@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scripts
+data:
+  script.sh: |
+{{ (.Files.Get "scripts/script.sh") | indent 4 }}
