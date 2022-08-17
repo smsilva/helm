@@ -1,0 +1,53 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Chart.Name }}-decrease-replicas
+spec:
+  schedule: {{ .Values.cronjob.schedule | quote }}
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  startingDeadlineSeconds: 60
+  concurrencyPolicy: Forbid
+
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: "false"
+          labels:
+            app: {{ .Chart.Name }}
+
+        spec:
+          restartPolicy: Never
+          serviceAccountName: {{ include "api-server-access.serviceAccountName" . }}
+
+          volumes:
+            - name: scripts
+              configMap:
+                name: scripts
+                defaultMode: 0744
+
+          containers:
+            - name: {{ .Chart.Name }}
+              securityContext:
+                {{- toYaml .Values.securityContext | nindent 16 }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+              volumeMounts:
+                - name: scripts
+                  mountPath: "/etc/scripts"
+                  readOnly: true
+
+              command: ["/bin/bash"]              
+              args: ["/etc/scripts/decrease-replicas.sh"]
+
+              livenessProbe:
+                exec:
+                  command:
+                    - cat
+                    - /tmp/healthy
+                initialDelaySeconds: 5
+                periodSeconds: 5
