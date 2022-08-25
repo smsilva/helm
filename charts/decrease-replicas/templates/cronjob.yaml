@@ -5,6 +5,8 @@ metadata:
   name: {{ .Chart.Name }}
   labels:
     app: {{ .Chart.Name }}
+  annotations:
+    helm.sh/hook: post-install
 spec:
   schedule: {{ .Values.cronjob.schedule | quote }}
   successfulJobsHistoryLimit: 3

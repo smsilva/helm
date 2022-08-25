@@ -4,9 +4,6 @@ kind: Job
 metadata:
   name: decrease-replicas-pre-install
   generateName: decrease-replicas-pre-install
-  annotations:
-    helm.sh/hook: pre-install
-    helm.sh/hook-weight: "-1"
 spec:
   backoffLimit: 3
 
