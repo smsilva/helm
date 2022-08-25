@@ -1,0 +1,6 @@
+apiVersion: v2
+name: decrease-replicas
+description: Job to decrease replicas for all HPA and Deployments
+type: application
+version: 0.2.0
+appVersion: "0.1.3"
