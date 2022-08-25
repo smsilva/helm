@@ -1,0 +1,10 @@
+# https://crontab.guru/#0_*/1_*_*_*
+# schedule: "0 */1 * * *"  # “At minute 0 past every hour.”
+# schedule: "*/15 * * * *" # “At every 15th minute.”
+cronjob:
+  schedule: "*/2 * * * *"
+
+image:
+  repository: docker.io/silviosilva/kubectl
+  pullPolicy: IfNotPresent
+  tag: ""
