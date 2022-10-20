@@ -2,5 +2,5 @@ apiVersion: v2
 name: generic-script-deployment
 description: Ubunutu with Generic Bash Script
 type: application
-version: 0.1.0
-appVersion: latest
+version: 0.1.2
+appVersion: 22.04

@@ -44,6 +44,6 @@ spec:
                   mountPath: "/etc/scripts"
                   readOnly: true
 
-              command: ["/bin/sh"]
+              command: ["/bin/bash"]
             
               args: ["/etc/scripts/remote-request"]
