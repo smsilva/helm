@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-scripts
+  labels:
+    app: {{ .Chart.Name }}
+data:
+  remote-request: |
+{{ (.Files.Get "scripts/remote-request") | indent 4 }}

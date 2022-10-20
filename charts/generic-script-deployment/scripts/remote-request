@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "Hello!"
+echo ""
+
+curl -is https://httpbin.org/get
+
+sleep 15
+
+echo "Done"
