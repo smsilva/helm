@@ -1,11 +1,31 @@
 #!/bin/bash
-echo "Hello!"
-echo ""
 
-curl -is https://httpbin.org/get
+log() {
+  MESSAGE=$1
 
-sleep 15
+  CURRENT_DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
 
-echo ""
-echo "Done"
-echo ""
+  printf "[%s] %s" "${CURRENT_DATETIME}" "${MESSAGE}"
+  echo
+}
+
+execution() {
+  log "Start"
+  
+  curl -is https://httpbin.org/get
+  
+  log "Done"
+}
+
+DEBUG_LEVEL=${DEBUG_LEVEL-1}
+SECONDS_BETWEEN_EXECUTIONS=${SECONDS_BETWEEN_EXECUTIONS-15}
+
+if [ "${DEBUG_LEVEL}" -gt 1 ]; then
+  echo "SECONDS_BETWEEN_EXECUTIONS.: ${SECONDS_BETWEEN_EXECUTIONS}"
+fi
+
+while true; do
+  execution
+  sleep ${SECONDS_BETWEEN_EXECUTIONS}
+  echo
+done

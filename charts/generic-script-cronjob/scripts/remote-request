@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Hello!"
+echo ""
+
+curl -is https://httpbin.org/get
+
+sleep 15
+
+echo ""
+echo "Done"
+echo ""
