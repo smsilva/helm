@@ -1,0 +1,8 @@
+- name: charlie
+  enabled: true
+
+  labels:
+    app: charlie
+  
+  annotations:
+    prometheus.io/scrape: "true"

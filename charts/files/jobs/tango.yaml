@@ -1,0 +1,5 @@
+- name: tango
+  enabled: false
+
+  labels:
+    app: tango
