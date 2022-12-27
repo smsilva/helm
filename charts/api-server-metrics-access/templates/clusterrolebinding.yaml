@@ -8,7 +8,7 @@ roleRef:
   kind: ClusterRole
   name: non-resource-url-metrics-access
 subjects:
-- kind: ServiceAccount
-  name: {{ include "api-server-metrics-access.serviceAccountName" . }}
-  namespace: default
+  - kind: ServiceAccount
+    name: {{ include "api-server-metrics-access.serviceAccountName" . }}
+    namespace: {{ .Release.Namespace }}
 {{- end }}

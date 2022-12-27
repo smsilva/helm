@@ -5,3 +5,5 @@ metadata:
 data:
   script.sh: |
 {{ (.Files.Get "scripts/script.sh") | indent 4 }}
+  nodes.sh: |
+{{ (.Files.Get "scripts/node.sh") | indent 4 }}

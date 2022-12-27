@@ -28,9 +28,9 @@ while true; do
 
   curl \
     --silent \
-    --cacert ${CACERT} \
-    --header "Authorization: Bearer ${TOKEN}" \
-    --request GET ${APISERVER}/metrics | grep \
+    --cacert ${CACERT?} \
+    --header "Authorization: Bearer ${TOKEN?}" \
+    --request GET ${APISERVER?}/metrics | grep \
       -E "^apiserver_flowcontrol_current_inqueue_requests|^etcd_db_total_size_in_bytes|^process_resident_memory_bytes"
 
   echo ""
