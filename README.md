@@ -1,113 +1,160 @@
 # Helm Charts
 
-## Install kind and Create a Local Cluster
-
-[Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start)
-
-## Setting up this repo
-
-```bash
-git clone https://github.com/smsilva/helm.git
-cd helm
-```
-
 ## Create and Install a Helm Chart
 
+### Create an Empty Helm Chart
+
 ```bash
-# Create a "mychart" Helm Chart
-helm create charts/mychart
+# Create charts directory
+mkdir charts/
 
-# remove files
-rm -rf charts/mychart/charts
-rm -rf charts/mychart/templates/deployment.yaml
-rm -rf charts/mychart/templates/hpa.yaml
-rm -rf charts/mychart/templates/ingress.yaml
-rm -rf charts/mychart/templates/NOTES.txt
-rm -rf charts/mychart/templates/service.yaml
-rm -rf charts/mychart/templates/serviceaccount.yaml
-rm -rf charts/mychart/templates/tests
-rm -rf charts/mychart/values.yaml
+# Create a "app-example" Helm Chart
+helm create charts/app-example
 
-# Show mychart structure
-find charts/mychart -type f
+# Show app-example structure
+find charts/app-example -type f
+
+# Helm Template
+helm template charts/app-example
+helm template charts/app-example | grep "# Source"
+
+# Remove some files
+rm -rf charts/app-example/charts
+rm -rf charts/app-example/templates/hpa.yaml
+rm -rf charts/app-example/templates/ingress.yaml
+rm -rf charts/app-example/templates/NOTES.txt
+rm -rf charts/app-example/templates/serviceaccount.yaml
+rm -rf charts/app-example/templates/tests
+
+# Show files
+find charts/app-example -type f
+
+# Helm Template
+helm template charts/app-example | grep "# Source"
+helm template charts/app-example
+
+# Remove more files
+rm -rf charts/app-example/templates/deployment.yaml
+rm -rf charts/app-example/templates/service.yaml
+rm -rf charts/app-example/values.yaml
+
+# Show files
+find charts/app-example -type f
 
 # Show Template
-helm template mychart-example charts/mychart
+helm template charts/app-example
+```
 
+### Create new Templates
+
+```bash
 # Generate a new values.yaml file
-cat <<EOF > charts/mychart/values.yaml
+cat <<EOF > charts/app-example/values.yaml
 config:
-  replicas: 3
+  seconds: 10
   timeout: 360
 EOF
 
 # Generate a new configmap.yaml file
-cat <<EOF > charts/mychart/templates/configmap.yaml
+cat <<EOF > charts/app-example/templates/configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: my-config-map
 data:
-  replicas: {{ .Values.config.replicas | quote }}
+  seconds: {{ .Values.config.seconds | quote }}
   timeout: {{ .Values.config.timeout | quote }}
 EOF
 
 # Generate a new NOTES.txt file
-cat <<EOF > charts/mychart/templates/NOTES.txt
-The config will have {{ .Values.config.replicas | quote }} replicas and a timeout of {{ .Values.config.timeout | quote }} seconds.
+cat <<EOF > charts/app-example/templates/NOTES.txt
+The config will have {{ .Values.config.seconds | quote }} seconds and a timeout of {{ .Values.config.timeout | quote }} seconds.
 EOF
 
 # Show Template
-helm template mychart-example charts/mychart
+helm template charts/app-example
+
+# Parameters
+helm template charts/app-example \
+  --set "config.seconds=15" \
+  --set "config.timeout=90"
+```
+
+### Install
+
+```bash
+# Install Helm Chart (Dry Run)
+helm install \
+  --namespace demo \
+  app-example charts/app-example \
+  --dry-run
 
 # Install Helm Chart
-helm install mychart-example charts/mychart
+helm install \
+  --namespace demo \
+  --create-namespace \
+  app-example charts/app-example
 
 # List Helm Releases
-helm list
+helm list -n demo
 
 # Check the ConfigMap
-kubectl get configmap my-config-map -o yaml
+kubectl -n demo get configmap my-config-map -o yaml
 
 # Unistall Helm Release
-helm uninstall mychart-example
+helm -n demo uninstall app-example
 
 # Install
-helm install mychart-example charts/mychart 
-helm list # take a look on the last column
+helm -n demo install app-example charts/app-example 
+
+helm list -n demo # take a look on the last column
 
 # Change Chart Version
-grep "^appVersion" charts/mychart/Chart.yaml
+grep "^appVersion" charts/app-example/Chart.yaml
 
-sed -i 's/appVersion:.*/appVersion: 1.0.0/g' charts/mychart/Chart.yaml
+sed -i 's/appVersion:.*/appVersion: 1.0.0/g' charts/app-example/Chart.yaml
 
-grep "^appVersion" charts/mychart/Chart.yaml
+grep "^appVersion" charts/app-example/Chart.yaml
 
 # Upgrade
-helm upgrade --install mychart-example charts/mychart
-helm list #  take a look on the third and last column
+helm upgrade \
+  --install \
+  --namespace demo \
+  app-example charts/app-example
 
+helm list --namespace demo #  take a look on the third and last column
+```
+
+### Customizing Installation
+
+```bash
 # Passing parameters
 helm upgrade \
-  --install mychart-example charts/mychart \
-  --set "config.replicas=10"
+  --namespace demo \
+  --install app-example charts/app-example \
+  --set "config.seconds=15"
 
-kubectl get configmap my-config-map -o yaml
+kubectl get configmap my-config-map \
+  --namespace demo \
+  --output yaml
 
 mkdir -p ${HOME}/trash
 
 cat <<EOF > ${HOME}/trash/values-extra.yaml
 config:
-  replicas: 15
+  seconds: 15
 EOF
 
 cat ${HOME}/trash/values-extra.yaml
 
 helm upgrade \
-  --install mychart-example charts/mychart \
+  --namespace demo \
+  --install app-example charts/app-example \
   --values ${HOME}/trash/values-extra.yaml
 
-kubectl get configmap my-config-map -o yaml
+kubectl get configmap my-config-map \
+  --namespace demo \
+  --output yaml
 ```
 
 ## Packaging
