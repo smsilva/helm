@@ -1,9 +1,0 @@
-replicas: 1
-
-image:
-  repository: docker.io/silviosilva/ubuntu
-  pullPolicy: IfNotPresent
-  tag: ""
-
-sleep:
-  seconds: 10

@@ -1,5 +1,0 @@
-- name: delta
-  enabled: true
-
-  labels:
-    app: delta

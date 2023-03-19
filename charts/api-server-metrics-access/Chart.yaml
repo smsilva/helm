@@ -1,6 +1,0 @@
-apiVersion: v2
-name: api-server-metrics-access
-description: Deployment for API Server /metrics acccess
-type: application
-version: 0.1.0
-appVersion: "latest"
