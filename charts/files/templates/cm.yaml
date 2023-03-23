@@ -9,10 +9,11 @@ data:
   file.yaml: |
     global:
       cluster: undefined-name
+{{- $root_values := . }}
 {{- if .Values.jobs }}
     jobs:
 {{- range $job_name := .Values.jobs }}
 {{- $job_file_name := printf "%s/%s.yaml" "jobs" $job_name }}
-{{ $.Files.Get $job_file_name | indent 6 }}
+{{ tpl ($.Files.Get $job_file_name) $root_values | indent 6 }}
 {{- end }}
 {{- end }}

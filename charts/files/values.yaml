@@ -2,3 +2,6 @@ jobs:
   - tango
   - delta
   - charlie
+
+config:
+  timeout: 10

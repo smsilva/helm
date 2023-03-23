@@ -6,3 +6,4 @@
   
   annotations:
     prometheus.io/scrape: "true"
+    silvios.me/timeout: "{{ .Values.config.timeout }}"
