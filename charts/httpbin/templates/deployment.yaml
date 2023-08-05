@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "httpbin.fullname" . }}-{{ .Values.global.tenant.name }}
+  name: {{ include "httpbin.fullname" . }}
   labels:
     {{- include "httpbin.labels" . | nindent 4 }}
 spec:
