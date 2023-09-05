@@ -3,7 +3,7 @@ entries:
   api-server-metrics-access:
   - apiVersion: v2
     appVersion: latest
-    created: "2023-09-05T11:43:05.865124621-03:00"
+    created: "2023-09-05T11:47:19.409269178-03:00"
     description: A Helm chart for Kubernetes
     digest: 8b431d71cf993a37ab54a3f7f3095db1bca595bef8671448cb3cf39ea1b933ee
     name: api-server-metrics-access
@@ -14,7 +14,17 @@ entries:
   httpbin:
   - apiVersion: v2
     appVersion: latest
-    created: "2023-09-05T11:43:05.865425768-03:00"
+    created: "2023-09-05T11:47:19.410130897-03:00"
+    description: httpbin for http request tests
+    digest: 20455be2eddc031d278a13bf68a2f4dcb8f3fd7ac1dc5272195f1bd2e2d48506
+    name: httpbin
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/smsilva/helm/main/releases/httpbin-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: latest
+    created: "2023-09-05T11:47:19.409512809-03:00"
     description: httpbin for http request tests
     digest: 7c881f518ba6415bb05210a8a1eea7e0701d5154108b3599ae6bca2643b166f1
     name: httpbin
@@ -22,4 +32,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/smsilva/helm/main/releases/httpbin-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-05T11:43:05.864749369-03:00"
+generated: "2023-09-05T11:47:19.408859536-03:00"
