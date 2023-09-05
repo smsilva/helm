@@ -131,8 +131,14 @@ helm repo index \
 ## Usage Example
 
 ```bash
-helm repo add \
-  smsilva https://raw.githubusercontent.com/smsilva/helm/main/releases
+helm repo add smsilva \
+   https://raw.githubusercontent.com/smsilva/helm/main/releases
+
+# Using a GitHub Personal Access Token for a Private Repository
+helm repo add smsilva \
+  --username "${GITHUB_PAT_TOKEN?}" \
+  --password "${GITHUB_PAT_TOKEN?}" \
+   https://raw.githubusercontent.com/smsilva/helm/main/releases
 
 helm repo update smsilva
 helm search repo smsilva
